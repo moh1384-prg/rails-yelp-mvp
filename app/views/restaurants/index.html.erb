@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Restaurants</h1>
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+    <li style="list-style: none;" class="card mt-4">
+      <h4 class="card-header text-center bg-primary text-white text-decoration-none"><%= restaurant.name %></h4>
+      <div class="card-body">
+        <strong>Address:</strong> <%= restaurant.address %><br>
+        <strong>Phone Number:</strong> <%= restaurant.phone_number %><br>
+        <strong>Category:</strong> <%= restaurant.category %><br>
+        <strong>Reviews:</strong>
+        <ul>
+          <% restaurant.reviews.each do |review| %>
+          <li>
+            <strong>Rating:</strong> <%= review.rating %><br>
+            <strong>Content:</strong> <%= review.content %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>

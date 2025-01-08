@@ -1,0 +1,16 @@
+<div class="container mt-4">
+  <div class="card">
+    <h2 class="card-header bg-primary text-center text-white"><%= @restaurant.name %></h2>
+    <div class="card-body">
+      <strong>Address:</strong>
+      <p><%= @restaurant.address %></p>
+      <strong>Phone:</strong>
+      <p><%= @restaurant.phone_number %></p>
+      <strong>Category:</strong>
+      <p><%= @restaurant.category %></p>
+    </div>
+    <%= link_to 'Add Review', new_restaurant_review_path(@restaurant) %>
+  </div>
+
+</div>
+</div>
